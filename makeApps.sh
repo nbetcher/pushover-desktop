@@ -2,8 +2,9 @@
 
 if [ "$1" == "build" ]; then
 	cd /tmp
-	git clone https://github.com/jiahaog/nativefier.git
+	git clone https://github.com/mbergo/nativefier.git
 	cd nativefier
+	git checkout fix/docker
 	docker build -t nativefier .
 	exit
 fi
